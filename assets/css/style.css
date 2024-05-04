@@ -1,33 +1,4 @@
-/*-----------------------------------------------------------------------------------
 
-    Template Name: SereniCraft
-    Version: 1.0.0
------------------------------------------------------------------------------------
-
-    CSS INDEX
-    ===================
-
-    01. Template default CSS
-    02. Layout CSS
-        - Header CSS
-        - Footer CSS
-        - Section, Spacing & Container etc CSS
-    03. Modules CSS
-        - Bootstrap Style Override
-        - Plugins Style Override
-        - Hero Slider CSS
-        - Title CSS
-        - Product CSS
-        - Shop CSS
-        - Blog CSS
-        - Form CSS
-        - Others CSS
-
------------------------------------------------------------------------------------*/
-/*----------------------------------------*/
-/*  01. Template default CSS
-/*----------------------------------------*/
-/* Common Style */
 *,
 *::before,
 *::after {
