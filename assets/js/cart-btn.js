@@ -29,7 +29,11 @@
                 // Store updated cart items array in local storage
                 localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
+                // Get the current hostname (IP address)
+                const currentHostname = window.location.hostname;
+                // Construct the URL dynamically
+                const shoppingCartURL = 'http://' + currentHostname + ':5501/shopping-cart.html';
                 // Redirect to shopping-cart.html without any query parameters
-                window.location.href = 'http://127.0.0.1:5501/shopping-cart.html';
+                window.location.href = shoppingCartURL;
             }
         });
