@@ -838,7 +838,7 @@ hr {
 }
 
 .h1-testimonial-section {
-  background-image: url(../images/testimonial/testimonial-bg.png);
+  background-image: url(../images/testimonial/testimonial-bg-2.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -846,7 +846,7 @@ hr {
 
 .h2-testimonial-section,
 .h4-testimonial-section {
-  background-image: url(../images/testimonial/testimonial-bg.png);
+  background-image: url(../images/testimonial/testimonial-bg-2.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -4516,67 +4516,6 @@ textarea.form-field:focus {
   background-size: cover;
 }
 
-/* Team */
-.team {
-  
-  background-color: #f8f9fa;
-}
-.team:hover .team-social {
-  visibility: visible;
-  transform: translateX(-50%) translateY(-50%);
-  opacity: 1;
-}
-.team-thumb {
-  position: relative;
-}
-.team-social {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: flex;
-  visibility: hidden;
-  padding: 10px 15px;
-  transition: all 0.4s ease 0s;
-  transform: translateX(-50%);
-  opacity: 0;
-  border-radius: 4px;
-  background-color: #fff;
-  gap: 6px;
-}
-.team-social a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border: 1px solid #E5E5E5;
-  border-radius: 50%;
-}
-.team-social a i {
-  font-size: 16px;
-}
-.team-social a:hover {
-  color: #fff;
-  border-color: #C7A17A;
-  background-color: #C7A17A;
-}
-.team-content {
-  padding: 20px;
-}
-.team-name {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.5;
-  margin-bottom: 5px;
-  text-align: center;
-}
-.team-title {
-  font-size: 15px;
-  line-height: 1.5;
-  display: block;
- text-align: left;
- 
-}
 
 /* Testimonial */
 .testimonial {
@@ -4584,19 +4523,7 @@ textarea.form-field:focus {
   margin: auto;
   text-align: center;
 }
-.testimonial-client-thumb {
-  overflow: hidden;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 30px;
-  border-radius: 50%;
-}
-.testimonial-client-thumb img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
+
 .testimonial-client-name {
   font-size: 14px;
   font-weight: 600;
