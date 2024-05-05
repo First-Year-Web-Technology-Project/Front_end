@@ -830,8 +830,8 @@ hr {
 }
 
 /* Other Sections Styles */
-.h1-coffee-menu-section {
-  background-image: url(../images/coffee-menu/coffee-menu-bg.png);
+.h1-handicrafts-menu-section {
+  background-image: url(../images/handicrafts-menu/handicrafts-menu-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -4266,8 +4266,8 @@ textarea.form-field:focus {
   width: 100%;
 }
 
-/* Coffee Menu */
-.coffee-menu {
+/* handicrafts Menu */
+.handicrafts-menu {
   position: relative;
   display: flex;
   margin-left: 43px;
@@ -4276,7 +4276,7 @@ textarea.form-field:focus {
   border: 1px solid #E5E5E5;
 }
 @media only screen and (max-width: 479px) {
-  .coffee-menu {
+  .handicrafts-menu {
     flex-direction: column;
     margin-top: 43px;
     margin-left: 0;
@@ -4285,7 +4285,7 @@ textarea.form-field:focus {
     text-align: center;
   }
 }
-.coffee-menu-thumb {
+.handicrafts-menu-thumb {
   position: absolute;
   top: 50%;
   left: 0;
@@ -4297,34 +4297,34 @@ textarea.form-field:focus {
   transform: translateX(-50%) translateY(-50%);
 }
 @media only screen and (max-width: 479px) {
-  .coffee-menu-thumb {
+  .handicrafts-menu-thumb {
     top: 0;
     left: 50%;
   }
 }
-.coffee-menu-content {
+.handicrafts-menu-content {
   max-width: 350px;
   margin-right: auto;
   padding-right: 20px;
 }
 @media only screen and (max-width: 479px) {
-  .coffee-menu-content {
+  .handicrafts-menu-content {
     padding: 0;
   }
 }
-.coffee-menu-content p {
+.handicrafts-menu-content p {
   font-size: 14px;
 }
-.coffee-menu-title {
+.handicrafts-menu-title {
   font-size: 20px;
   letter-spacing: 0.5px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .coffee-menu-title {
+  .handicrafts-menu-title {
     font-size: 18px;
   }
 }
-.coffee-menu-price {
+.handicrafts-menu-price {
   font-size: 22px;
   font-weight: 600;
   line-height: 1;
@@ -4340,7 +4340,7 @@ textarea.form-field:focus {
   border-left: 1px solid #E5E5E5;
 }
 @media only screen and (max-width: 479px) {
-  .coffee-menu-price {
+  .handicrafts-menu-price {
     min-height: auto;
     margin-top: 20px;
     padding: 15px 20px 0;
@@ -4348,7 +4348,7 @@ textarea.form-field:focus {
     border-left: none;
   }
 }
-.coffee-menu-price del {
+.handicrafts-menu-price del {
   font-size: 16px;
   margin-top: 5px;
   color: #1F2226;
