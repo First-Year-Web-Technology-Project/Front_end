@@ -58,18 +58,14 @@
                     <nav class="main-menu">
                         <ul>
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="Shop-Craft.html">CRAFT</a></li>
-                            <li><a href="shop-Accessories.html">Essential Oil </a></li>
-                            <li><a href="shop-Gifts.html">Beverages </a></li>
-                            <li><a href="shop-Culture.html">Culture</a></li>
+                            <li><a href="Shop-Craft.html">Craft</a></li>
+                            <li><a href="shop-Accessories.html">Accessories </a></li>
+                            <li><a href="shop-Gifts.html">Gifts </a></li>
 
                             <li class="has-sub-menu">
                                 <a href="about-us.html">Explore</a>
                                 <ul class="sub-menu">
                                     <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="register.html">Register</a></li>
                                     <li><a href="faq.html">FAQ</a></li>
                                 </ul>
                             </li>
@@ -82,6 +78,43 @@
                     </nav>
                 </div>
                 <!-- Menu End -->
+                <!-- Action Start -->
+                <div class="col-auto">
+                    <div class="header-action">
+                        <div class="header-action-item">
+                            <button class="header-action-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search"><i class="sli-magnifier"></i></button>
+                        </div>
+                        <div class="header-action-item">
+                            <button class="header-action-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart"><i class="sli-basket-loaded"><span class="count">02</span></i> <span class="amount">$229.00</span></button>
+                        </div>
+                        <div class="header-action-item dropdown">
+                            <button class="header-action-toggle" type="button" data-bs-toggle="dropdown"><i class="sli-settings"></i></button>
+                            <div class="dropdown-menu header-dropdown-menu">
+                                <h6 class="header-dropdown-menu-title">Account</h6>
+                                <ul>
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="register.html">Register</a></li>
+                                    <li><a href="my-account.html">My Account</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header-action-item d-lg-none">
+                            <button class="header-action-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-header"><i class="sli-menu"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Action End -->
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end w-100 bg-dark border-0" id="offcanvas-search">
+        <div class="offcanvas-body d-flex align-items-center justify-content-center">
+            <button type="button" class="btn-close offcanvas-search-close-btn text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div class="offcanvas-search-form">
+                <form action="#">
+                    <input type="search" name="q" placeholder="Search our store">
+                    <button type="submit"><i class="sli-magnifier"></i></button>
+                </form>
             </div>
         </div>
     </div>
@@ -138,78 +171,30 @@
         <div class="container">
             <ul class="breadcrumb">
                 <li><a href="index.html">Home</a></li>
-                <li>Wishlist</li>
+                <li>Login</li>
             </ul>
         </div>
     </div>
     <!-- Page Banner Section End -->
 
-    <!-- Wishlist Section Start -->
+    <!-- Login Section Start -->
     <div class="section section-padding">
         <div class="container">
-            <!-- Cart Table For Tablet & Up Devices Start -->
-            <table class="cart-table table table-bordered text-center align-middle mb-6 d-none d-md-table">
-                <thead>
-                    <tr>
-                        <th class="image">Image</th>
-                        <th class="title">Product</th>
-                        <th class="price">Price</th>
-                        <th class="add-to-cart">Add to Cart</th>
-                        <th class="remove">Remove</th>
-                    </tr>
-                </thead>
-                <tbody class="border-top-0">
-                    <tr>
-                        <th><a href="product-details.html">
-                                <img src="./assets/images/products/single/single-product-thumb-1.jpg" alt="House HANDICRAFTS Original">
-                            </a></th>
-                        <td><a href="product-details.html">House HANDICRAFTS Original</a></td>
-                        <td>$110.00</td>
-                        <td><button class="btn btn-sm btn-dark btn-primary-hover">Add to Cart</button></td>
-                        <td><button class="remove-btn"><i class="sli-close"></i></button></td>
-                    </tr>
-                    <tr>
-                        <th><a href="product-details.html">
-                                <img src="./assets/images/products/single/single-product-thumb-2.jpg" alt="Medium Roast Ground HANDICRAFTS">
-                            </a></th>
-                        <td><a href="product-details.html">Medium Roast Ground HANDICRAFTS</a></td>
-                        <td>$19.00</td>
-                        <td><button class="btn btn-sm btn-dark btn-primary-hover">Add to Cart</button></td>
-                        <td><button class="remove-btn"><i class="sli-close"></i></button></td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- Cart Table For Tablet & Up Devices End -->
-
-            <!-- Cart Table For Mobile Devices Start -->
-            <div class="cart-products-mobile d-md-none">
-                <div class="cart-product-mobile">
-                    <div class="cart-product-mobile-thumb">
-                        <a href="product-details.html" class="cart-product-mobile-image"><img src="./assets/images/products/single/single-product-thumb-1.jpg" alt="House HANDICRAFTS Original" width="90" height="103"></a>
-                        <button class="cart-product-mobile-remove"><i class="sli-close"></i></button>
+            <div class="login-register-form">
+                <h3 class="title">Login</h3>
+                <p>Please Register using account detail bellow.</p>
+                <form action="#">
+                    <div class="row row-cols-1 g-4">
+                        <div class="col"><input class="form-field" type="email" placeholder="Email"></div>
+                        <div class="col"><input class="form-field" type="password" placeholder="Password"></div>
+                        <div class="col"><input class="btn btn-dark btn-primary-hover rounded-0 w-100" type="submit" value="Sign In"></div>
+                        <div class="col">Don't have an account? <a href="register.html"><b>Create One</b></a></div>
                     </div>
-                    <div class="cart-product-mobile-content">
-                        <h5 class="cart-product-mobile-title"><a href="product-details.html">House HANDICRAFTS Original</a></h5>
-                        <span class="cart-product-mobile-quantity">1 x $110.00</span>
-                        <div class="cart-product-mobile-add-to-cart"><button class="btn btn-sm btn-dark btn-primary-hover">Add to Cart</button></div>
-                    </div>
-                </div>
-                <div class="cart-product-mobile">
-                    <div class="cart-product-mobile-thumb">
-                        <a href="product-details.html" class="cart-product-mobile-image"><img src="./assets/images/products/single/single-product-thumb-2.jpg" alt="Medium Roast Ground HANDICRAFTS" width="90" height="103"></a>
-                        <button class="cart-product-mobile-remove"><i class="sli-close"></i></button>
-                    </div>
-                    <div class="cart-product-mobile-content">
-                        <h5 class="cart-product-mobile-title"><a href="product-details.html">Medium Roast Ground HANDICRAFTS</a></h5>
-                        <span class="cart-product-mobile-quantity">1 x $19.00</span>
-                        <div class="cart-product-mobile-add-to-cart"><button class="btn btn-sm btn-dark btn-primary-hover">Add to Cart</button></div>
-                    </div>
-                </div>
+                </form>
             </div>
-            <!-- Cart Table For Mobile Devices End -->
         </div>
     </div>
-    <!-- Wishlist Section End -->
+    <!-- Login Section End -->
 
     <!-- Footer Section Start -->
     <div class="footer-section section">
@@ -222,11 +207,11 @@
                     <div class="col-lg-4 col-sm-6 col-12 mb-8">
                         <div class="footer-widget footer-widget-dark">
                             <h5 class="footer-widget-title">About Info</h5>
-                            <p>This is the perfect platform to find the essence of the Indian Ocean. You will find the finest Ceylon elements.</p>
+                            <p>This is the perfect platform to find the essence of the Indian Ocean. You will find the finest Ceylon elements. </p>
                             <ul class="footer-widget-list-icon">
                                 <li><i class="sli-location-pin"></i>Addresss: 166, Galle Road, Panadura,Sri Lanka</li>
-                                <li><i class="sli-envelope"></i>Email: infor@SereniCraft.lk</li>
-                                <li><i class="sli-phone"></i>Phone: (012) 345 6789</li>
+                                <li><i class="sli-envelope"></i>Email: infor@SereniCraft.lk </li>
+                                <li><i class="sli-phone"></i>Phone: +94 763 632 836/+8190-2305-9224</li>
                             </ul>
                         </div>
                     </div>
@@ -292,9 +277,6 @@
                         <p class="footer-copyright footer-copyright-dark text-center">Copyright <b class="text-primary">SereniCraft</b> &copy;2024</p>
                     </div>
                     <!-- Footer Widget End -->
-
-                    
-
                 </div>
             </div>
         </div>
