@@ -4701,4 +4701,7 @@ margin-bottom:5px;
   color: #FFFFFF;
   
 }
-
+.btn-outline-light{
+  color: #000000;
+  border: 2px solid #000000;
+}
