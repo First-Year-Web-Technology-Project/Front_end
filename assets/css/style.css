@@ -4705,3 +4705,7 @@ margin-bottom:5px;
   color: #000000;
   border: 2px solid #000000;
 }
+.remove-btn{
+  width: 100px;
+  height: 100px;
+}
