@@ -1,16 +1,16 @@
 <?php
 
-    // Only process POST reqeusts.
+    // Only process POST requests.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Get the form fields and remove whitespace.
-        $f_name = strip_tags(trim($_POST["name"]));
-				$f_name = str_replace(array("\r","\n"),array(" "," "),$f_name);
-        $f_email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $f_subject = trim($_POST["subject"]);
+        $f_country = strip_tags(trim($_POST["country"]));
+				$f_country = str_replace(array("\r","\n"),array(" "," "),$f_country);
+        $f_contact_number = trim($_POST["contact_number"]);
+        $f_date = trim($_POST["date"]);
         $f_message = trim($_POST["message"]);
 
         // Check that data was sent to the mailer.
-        if ( empty($f_name) OR empty($f_message) OR !filter_var($f_email, FILTER_VALIDATE_EMAIL)) {
+        if ( empty($f_country) OR empty($f_message) OR !preg_match('/^[0-9]{10}$/', $f_contact_number)) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
             echo "Please complete the form and try again.";
@@ -22,16 +22,16 @@
         $recipient = "admin@devitems.com";
 
         // Set the email subject.
-        $subject = "New contact from $f_name";
+        $subject = "New contact from $f_country";
 
         // Build the email content.
-        $email_content = "Name: $f_name\n";
-        $email_content .= "Email: $f_email\n\n";
-        $email_content .= "Subject: $f_subject\n\n";
+        $email_content = "Country: $f_country\n";
+        $email_content .= "Contact Number: $f_contact_number\n\n";
+        $email_content .= "Date: $f_date\n\n";
         $email_content .= "Message:\n$f_message\n";
 
         // Build the email headers.
-        $email_headers = "From: $f_name <$f_email>";
+        $email_headers = "From: $f_country <$f_contact_number>";
 
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {

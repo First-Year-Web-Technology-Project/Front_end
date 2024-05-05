@@ -248,34 +248,6 @@
             }
         }
     });
-    /* Team Carousel */
-    const teamCarousel = new Swiper('.team-carousel', {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 15,
-        pagination: {
-            el: '.team-carousel .swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.team-carousel .swiper-button-next',
-            prevEl: '.team-carousel .swiper-button-prev',
-        },
-        breakpoints: {
-            480: {
-                slidesPerView: 2,
-                spaceBetween: 30
-            },
-            992: {
-                slidesPerView: 3,
-                spaceBetween: 30
-            },
-            1200: {
-                slidesPerView: 4,
-                spaceBetween: 30
-            }
-        }
-    });
 
     /* Magnific Popup */
     $('.mfp-zoom-gallery').magnificPopup({

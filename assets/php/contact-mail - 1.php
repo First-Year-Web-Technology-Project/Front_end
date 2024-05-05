@@ -18,10 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $errors[] = "Date is required";
     }
 
-    if (empty($_POST['time'])) {
-        $errors[] = "Time is required";
-    }
-
     if (empty($_POST['message'])) {
         $errors[] = "Message is required";
     }
@@ -34,7 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $message = "Country: {$_POST['country']}\n";
         $message .= "Contact Number: {$_POST['contact_number']}\n";
         $message .= "Date: {$_POST['date']}\n";
-        $message .= "Time: {$_POST['time']}\n";
         $message .= "Message: {$_POST['message']}\n";
 
         $headers = "From: {$_POST['email']}\r\nReply-To: {$_POST['email']}";
