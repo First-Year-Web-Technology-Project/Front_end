@@ -3437,12 +3437,20 @@ hr {
 }
 .cart-table tbody .remove-btn {
   display: inline-flex;
-  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
   border: none;
-  background-color: transparent;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
 }
 .cart-table tbody .remove-btn:hover {
-  color: #dc3545;
+  color: #ff0019;
+}
+.cart-table tbody .remove-btn i {
+  font-size: 22px;
+  pointer-events: none;
 }
 
 /* Cart Products Mobile */
@@ -3475,10 +3483,16 @@ hr {
   border: none;
   border-radius: 50%;
   background-color: #fff;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
 }
 .cart-product-mobile-remove:hover {
-  color: #fff;
-  background-color: #dc3545;
+  color: #ff0019;
+}
+.cart-product-mobile-remove i{
+  font-size: 21px;
+  pointer-events: none;
 }
 .cart-product-mobile-image {
   display: flex;
@@ -4704,12 +4718,4 @@ margin-bottom:5px;
 .btn-outline-light{
   color: #000000;
   border: 2px solid #000000;
-}
-.remove-btn{
-  width: 100px;
-  height: 100px;
-}
-i .sli-close{
-  width: 100px;
-  height: 100px;
 }
