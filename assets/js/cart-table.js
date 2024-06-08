@@ -2,9 +2,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const cartTable = document.querySelector('.cart-table tbody');
     const mobileCart = document.querySelector('.cart-products-mobile');
     const totalElement = document.querySelector('.total-amount');
+    const clearCartButton = document.getElementById('clear-cart'); // Get the clear cart button
 
     // Retrieve cart items from local storage
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
     // Function to render cart items in both desktop and mobile views
     function renderCartItems() {
@@ -73,16 +74,22 @@ document.addEventListener("DOMContentLoaded", function() {
             renderCartItems();
         } else if (event.target.classList.contains('dec') || event.target.classList.contains('inc')) {
             const index = event.target.dataset.index;
-            const input = document.querySelectorAll(`input.product-quantity-box[data-index="${index}"]`);
             let quantity = parseInt(cartItems[index].quantity);
             if (event.target.classList.contains('dec')) {
                 quantity = quantity > 1 ? quantity - 1 : 1;
             } else if (event.target.classList.contains('inc')) {
-                quantity = quantity + 1;
+                quantity += 1;
             }
             cartItems[index].quantity = quantity;
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
             renderCartItems();
         }
+    });
+
+    // Event listener for clear cart button
+    clearCartButton.addEventListener('click', function() {
+        cartItems = [];
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        renderCartItems();
     });
 });
