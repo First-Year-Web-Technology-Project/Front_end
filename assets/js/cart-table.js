@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const cartTable = document.querySelector('.cart-table tbody');
     const mobileCart = document.querySelector('.cart-products-mobile');
-    const subtotalElement = document.querySelector('.subtotal-amount');
     const totalElement = document.querySelector('.total-amount');
 
     // Retrieve cart items from local storage
@@ -12,11 +11,11 @@ document.addEventListener("DOMContentLoaded", function() {
         cartTable.innerHTML = '';
         mobileCart.innerHTML = '';
 
-        let subtotal = 0;
+        let total = 0;
 
         cartItems.forEach((item, index) => {
             const itemTotal = item.price * item.quantity;
-            subtotal += itemTotal;
+            total += itemTotal;
 
             // Add item to desktop cart
             const newRow = document.createElement('tr');
@@ -58,9 +57,8 @@ document.addEventListener("DOMContentLoaded", function() {
             mobileCart.appendChild(newMobileItem);
         });
 
-        // Update the subtotal and total amounts
-        subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
-        totalElement.textContent = `$${subtotal.toFixed(2)}`;
+        // Update the total amount
+        totalElement.textContent = `$${total.toFixed(2)}`;
     }
 
     // Initial rendering of cart items
