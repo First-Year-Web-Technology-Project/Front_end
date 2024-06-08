@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const cartTable = document.querySelector('.cart-table tbody');
     const mobileCart = document.querySelector('.cart-products-mobile');
+    const subtotalElement = document.querySelector('.subtotal-amount');
+    const totalElement = document.querySelector('.total-amount');
 
     // Retrieve cart items from local storage
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -10,13 +12,18 @@ document.addEventListener("DOMContentLoaded", function() {
         cartTable.innerHTML = '';
         mobileCart.innerHTML = '';
 
+        let subtotal = 0;
+
         cartItems.forEach((item, index) => {
+            const itemTotal = item.price * item.quantity;
+            subtotal += itemTotal;
+
             // Add item to desktop cart
             const newRow = document.createElement('tr');
             newRow.innerHTML = `
                 <td><img src="${item.image}" alt="${item.name}" width="90" height="103"></td>
                 <td>${item.name}</td>
-                <td>$${item.price}</td>
+                <td>$${item.price.toFixed(2)}</td>
                 <td>
                     <div class="product-quantity-count">
                         <button class="dec qty-btn" data-index="${index}">-</button>
@@ -24,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <button class="inc qty-btn" data-index="${index}">+</button>
                     </div>
                 </td>
-                <td>$${(item.price * item.quantity).toFixed(2)}</td>
+                <td>$${itemTotal.toFixed(2)}</td>
                 <td><button class="remove-btn" data-index="${index}"><i class="sli-close"></i></button></td>
             `;
             cartTable.appendChild(newRow);
@@ -39,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
                 <div class="cart-product-mobile-content">
                     <h5 class="cart-product-mobile-title">${item.name}</h5>
-                    <span class="cart-product-mobile-quantity">${item.quantity} x ${item.price}</span>
-                    <span class="cart-product-mobile-total"><b>Total:</b> ${(item.price * item.quantity).toFixed(2)}</span>
+                    <span class="cart-product-mobile-quantity">${item.quantity} x $${item.price.toFixed(2)}</span>
+                    <span class="cart-product-mobile-total"><b>Total:</b> $${itemTotal.toFixed(2)}</span>
                     <div class="product-quantity-count">
                         <button class="dec qty-btn" data-index="${index}">-</button>
                         <input class="product-quantity-box" type="text" name="quantity" value="${item.quantity}">
@@ -50,6 +57,10 @@ document.addEventListener("DOMContentLoaded", function() {
             `;
             mobileCart.appendChild(newMobileItem);
         });
+
+        // Update the subtotal and total amounts
+        subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+        totalElement.textContent = `$${subtotal.toFixed(2)}`;
     }
 
     // Initial rendering of cart items
@@ -57,8 +68,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Event listener for quantity changes and removals
     document.body.addEventListener('click', function(event) {
-        if (event.target.classList.contains('remove-btn') || event.target.classList.contains('cart-product-mobile-remove')) {
-            const index = event.target.dataset.index;
+        if (event.target.closest('.remove-btn') || event.target.closest('.cart-product-mobile-remove')) {
+            const index = event.target.closest('button').dataset.index;
             cartItems.splice(index, 1);
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
             renderCartItems();
