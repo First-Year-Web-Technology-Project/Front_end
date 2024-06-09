@@ -143,8 +143,7 @@
                                     <li><a href="shop-Accessories.html">Accessories </a></li>
                                     <li><a href="shop-Gifts.html">Gifts </a></li>
                                     <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>                             
                                     <li><a href="my-account.html">My Account</a></li>   
                         </ul>
                     </li>
@@ -181,7 +180,7 @@
     <!-- Product Section Start -->
     <div class="shop-product-section section section-padding">
         <div class="container">
-            <form action="#" class="checkout-form">
+            <form class="checkout-form">
                 <div class="row g-8">
 
                     <div class="col-lg-7">
@@ -192,19 +191,19 @@
                             <div class="row row-cols-sm-2 row-cols-1 g-4">
                                 <div class="col">
                                     <label>First Name*</label>
-                                    <input class="form-field" type="text" placeholder="First Name">
+                                    <input class="form-field" type="text" placeholder="First Name" required>
                                 </div>
                                 <div class="col">
                                     <label>Last Name*</label>
-                                    <input class="form-field" type="text" placeholder="Last Name">
+                                    <input class="form-field" type="text" placeholder="Last Name" required>
                                 </div>
                                 <div class="col">
                                     <label>Email Address*</label>
-                                    <input class="form-field" type="email" placeholder="Email Address">
+                                    <input class="form-field" type="email" placeholder="Email Address" required>
                                 </div>
                                 <div class="col">
                                     <label>Phone no*</label>
-                                    <input class="form-field" type="text" placeholder="Phone number">
+                                    <input class="form-field" type="text" placeholder="Phone number" required>
                                 </div>
                                 <div class="col-sm-12">
                                     <label>Company Name</label>
@@ -212,41 +211,31 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <label>Address*</label>
-                                    <input class="form-field" type="text" placeholder="Address line 1">
+                                    <input class="form-field" type="text" placeholder="Address line 1" required>
                                 </div>
                                 <div class="col-sm-12">
                                     <input class="form-field" type="text" placeholder="Address line 2">
                                 </div>
                                 <div class="col">
                                     <label>Country*</label>
-                                    <select class="form-field">
-                                        <option>Bangladesh</option>
-                                        <option>China</option>
-                                        <option>country</option>
-                                        <option>India</option>
-                                        <option>Japan</option>
-                                    </select>
+                                    <input class="form-field" type="text" placeholder="Country" required>
                                 </div>
                                 <div class="col">
                                     <label>Town/City*</label>
-                                    <input class="form-field" type="text" placeholder="Town/City">
+                                    <input class="form-field" type="text" placeholder="Town/City" required>
                                 </div>
                                 <div class="col">
                                     <label>State*</label>
-                                    <input class="form-field" type="text" placeholder="State">
+                                    <input class="form-field" type="text" placeholder="State" required>
                                 </div>
                                 <div class="col">
                                     <label>Zip Code*</label>
-                                    <input class="form-field" type="text" placeholder="Zip Code">
+                                    <input class="form-field" type="text" placeholder="Zip Code" required>
                                 </div>
                                 <div class="col-sm-12 d-flex flex-wrap gap-6">
                                     <div class="form-check m-0">
-                                        <input class="form-check-input" type="checkbox" id="create_account">
-                                        <label class="form-check-label" for="create_account">Create an Acount?</label>
-                                    </div>
-                                    <div class="form-check m-0">
                                         <input class="form-check-input" type="checkbox" id="shiping_address" data-toggle-shipping="#shipping-form">
-                                        <label class="form-check-label" for="shiping_address">Ship to Different Address</label>
+                                        <label class="form-check-label" for="shiping_address">If you want to ship to different address?</label>
                                     </div>
                                 </div>
                             </div>
@@ -259,19 +248,19 @@
                             <div class="row row-cols-sm-2 row-cols-1 g-4">
                                 <div class="col">
                                     <label>First Name*</label>
-                                    <input class="form-field" type="text" placeholder="First Name">
+                                    <input class="form-field" type="text" placeholder="First Name" required>
                                 </div>
                                 <div class="col">
                                     <label>Last Name*</label>
-                                    <input class="form-field" type="text" placeholder="Last Name">
+                                    <input class="form-field" type="text" placeholder="Last Name" required>
                                 </div>
                                 <div class="col">
                                     <label>Email Address*</label>
-                                    <input class="form-field" type="email" placeholder="Email Address">
+                                    <input class="form-field" type="email" placeholder="Email Address" required>
                                 </div>
                                 <div class="col">
                                     <label>Phone no*</label>
-                                    <input class="form-field" type="text" placeholder="Phone number">
+                                    <input class="form-field" type="text" placeholder="Phone number" required>
                                 </div>
                                 <div class="col-sm-12">
                                     <label>Company Name</label>
@@ -279,24 +268,18 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <label>Address*</label>
-                                    <input class="form-field" type="text" placeholder="Address line 1">
+                                    <input class="form-field" type="text" placeholder="Address line 1" required>
                                 </div>
                                 <div class="col-sm-12">
                                     <input class="form-field" type="text" placeholder="Address line 2">
                                 </div>
                                 <div class="col">
                                     <label>Country*</label>
-                                    <select class="form-field">
-                                        <option>Bangladesh</option>
-                                        <option>China</option>
-                                        <option>country</option>
-                                        <option>India</option>
-                                        <option>Japan</option>
-                                    </select>
+                                    <input class="form-field" type="text" placeholder="Country" required>
                                 </div>
                                 <div class="col">
                                     <label>Town/City*</label>
-                                    <input class="form-field" type="text" placeholder="Town/City">
+                                    <input class="form-field" type="text" placeholder="Town/City" required>
                                 </div>
                                 <div class="col">
                                     <label>State*</label>
@@ -304,7 +287,7 @@
                                 </div>
                                 <div class="col">
                                     <label>Zip Code*</label>
-                                    <input class="form-field" type="text" placeholder="Zip Code">
+                                    <input class="form-field" type="text" placeholder="Zip Code" required>
                                 </div>
                             </div>
                         </div>
@@ -314,10 +297,8 @@
                     <div class="col-lg-5">
 
                         <!-- Checkout Summary Start -->
-                        <div class="checkout-box">
-
+                        <div class="checkout-box">                            
                             <h4 class="mb-4">Cart Total</h4>
-
                             <table class="checkout-summary-table table table-borderless">
                                 <thead>
                                     <tr>
@@ -327,18 +308,6 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Table Lamp x 1</td>
-                                        <td>$110.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Big Table Lamp x 1</td>
-                                        <td>$112.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="border-top">Sub Total</td>
-                                        <td class="border-top">$222.00</td>
-                                    </tr>
-                                    <tr>
                                         <td class="border-top">Shipping Fee</td>
                                         <td class="border-top">$10.00</td>
                                     </tr>
@@ -346,13 +315,13 @@
                                 <tfoot>
                                     <tr>
                                         <th class="border-top">Grand Total</th>
-                                        <th class="border-top">$232.00</th>
+                                        <th class="border-top"></th>
                                     </tr>
                                 </tfoot>
                             </table>
-
                         </div>
                         <!-- Checkout Summary End -->
+
 
                         <!-- Payment Method Start -->
                         <div class="checkout-box">
@@ -362,7 +331,7 @@
                             <div class="checkout-payment-method">
 
                                 <div class="single-method form-check">
-                                    <input class="form-check-input" type="radio" id="payment_check" name="payment-method" checked>
+                                    <input class="form-check-input" type="radio" id="payment_check" name="payment-method" required>
                                     <label class="form-check-label" for="payment_check">Check Payment</label>
                                     <p>Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
                                 </div>
@@ -386,13 +355,13 @@
                                 </div>
 
                                 <div class="single-method form-check">
-                                    <input class="form-check-input" type="checkbox" id="accept_terms">
-                                    <label class="form-check-label" for="accept_terms">I’ve read and accept the terms &amp; conditions</label>
+                                    <input class="form-check-input" type="checkbox" id="accept_terms" required>
+                                    <label class="form-check-label" for="accept_terms">I’ve read and accept the&nbsp;<a href="Privacy policy.html"><u>Terms &amp; Conditions</u></a></label>
                                 </div>
 
                             </div>
 
-                            <button class="btn btn-dark btn-primary-hover rounded-0 mt-6">Place order</button>
+                            <button id="checkout-clear-cart" type="submit" class="btn btn-dark btn-primary-hover rounded-0 mt-6">Place order</button>
 
                         </div>
                         <!-- Payment Method End -->
@@ -509,6 +478,7 @@
 
     <!-- Activation JS -->
     <script src="./assets/js/active.js"></script>
+    <script src="./assets/js/checkout.js"></script>
 
 </body>
 
