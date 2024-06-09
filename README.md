@@ -3,6 +3,14 @@
 Welcome to the SeriniCraft repository! This project is a static website built with pure HTML, CSS, and JavaScript. 
 The site is deployed using GitHub Pages and can be accessed [Serini.com](https://first-year-web-technology-project.github.io/SeriniCraft/)
 
+## Team Members
+
+- [Ishan Hansaka Silva]()
+- [Navindu Prabath Jayalath](https://github.com/kin-lgtm)
+- [Weditha Vishwa](https://github.com/WedithaV)
+- [Shireen Shamil](https://github.com/ShireenShamil)
+- [Samha](https://github.com/SamFaMH)
+
 ## Table of Contents
 
 - Project Overview
