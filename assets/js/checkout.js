@@ -47,3 +47,4 @@ document.addEventListener("DOMContentLoaded", function() {
     // Render checkout items when DOM content is loaded
     renderCheckoutItems();
 });
+
