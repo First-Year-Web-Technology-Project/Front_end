@@ -464,8 +464,8 @@ for (let i = 0; i < addToCartButtons.length; i++) {
   const productPrice = addToCartButton.closest('.product').querySelector('.product-price').textContent;
 
   addToCartButton.addEventListener('click', function() {
-    window.location.href = `shopping-cart.html?price=${productPrice}`;
-})}
+    window.location.href = `/shopping-cart.htm?price=${productPrice}`;
+})}l
 
 const quickViewButtons = document.querySelectorAll('.product-action-btn[data-tooltip-text="Quick View"]');
 
