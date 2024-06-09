@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function() {
     const checkoutTableBody = document.querySelector('.checkout-summary-table tbody');
 
@@ -24,6 +22,14 @@ document.addEventListener("DOMContentLoaded", function() {
             checkoutTableBody.appendChild(newRow);
         });
 
+        // Add discount row
+        const discountRow = document.createElement('tr');
+        discountRow.innerHTML = `
+            <td class="border-top">Discount</td>
+            <td class="border-top">0.2%</td>
+        `;
+        checkoutTableBody.appendChild(discountRow);
+
         // Add shipping fee row
         const shippingRow = document.createElement('tr');
         shippingRow.innerHTML = `
@@ -34,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Calculate and update grand total
         const grandTotalRow = document.querySelector('.checkout-summary-table tfoot .border-top');
-        const grandTotal = total + 10; // Add shipping fee to total
+        const grandTotal = total - total * 0.2/100 + 10; // Add shipping fee to total
         grandTotalRow.nextElementSibling.textContent = `$${grandTotal.toFixed(2)}`;
     }
 
