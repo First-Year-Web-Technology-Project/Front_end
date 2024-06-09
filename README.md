@@ -5,7 +5,7 @@ The site is deployed using GitHub Pages and can be accessed [Serini.com](https:/
 
 ## Team Members
 
-- [Ishan Hansaka Silva]()
+- [Ishan Hansaka Silva](https://github.com/IshanHansaka)
 - [Navindu Prabath Jayalath](https://github.com/kin-lgtm)
 - [Weditha Vishwa](https://github.com/WedithaV)
 - [Shireen Shamil](https://github.com/ShireenShamil)
