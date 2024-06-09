@@ -2,21 +2,26 @@ document.addEventListener("DOMContentLoaded", function() {
     const cartTable = document.querySelector('.cart-table tbody');
     const mobileCart = document.querySelector('.cart-products-mobile');
     const totalElement = document.querySelector('.total-amount');
+    const subtotalElement = document.querySelector('.subtotal-amount');
+    const discountElement = document.querySelector('.discount-amount');
     const clearCartButton = document.getElementById('clear-cart'); // Get the clear cart button
 
     // Retrieve cart items from local storage
     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    // Discount
+    const discount = 0.2;
 
     // Function to render cart items in both desktop and mobile views
     function renderCartItems() {
         cartTable.innerHTML = '';
         mobileCart.innerHTML = '';
 
-        let total = 0;
+        let subtotal = 0;
 
         cartItems.forEach((item, index) => {
             const itemTotal = item.price * item.quantity;
-            total += itemTotal;
+            subtotal += itemTotal;
 
             // Add item to desktop cart
             const newRow = document.createElement('tr');
@@ -58,8 +63,9 @@ document.addEventListener("DOMContentLoaded", function() {
             mobileCart.appendChild(newMobileItem);
         });
 
-        // Update the total amount
-        totalElement.textContent = `$${total.toFixed(2)}`;
+        // Update subtotal, discount, and total amounts
+        subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+        totalElement.textContent = `$${(subtotal - subtotal*discount/100).toFixed(2)}`;
     }
 
     // Initial rendering of cart items
