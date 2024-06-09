@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Retrieve cart items from local storage
     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-    // Calculate discount
-    const discount = 0.2; // Calculate discount only once
+    // Discount
+    const discount = 0.2;
 
     // Function to render cart items in both desktop and mobile views
     function renderCartItems() {
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Update subtotal, discount, and total amounts
         subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
-        totalElement.textContent = `$${(subtotal - discount).toFixed(2)}`;
+        totalElement.textContent = `$${(subtotal - subtotal*discount/100).toFixed(2)}`;
     }
 
     // Initial rendering of cart items
