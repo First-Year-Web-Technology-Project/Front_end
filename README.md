@@ -44,20 +44,7 @@ To view the website locally, simply open the `index.html` file in a web browser.
 
 ## Deployment
 
-The site is automatically deployed using GitHub Pages. Follow these steps to deploy any changes:
-
-1. **Commit your changes:**
-   ```bash
-   git add .
-   git commit -m "Your commit message"
-   ```
-
-2. **Push to the main branch:**
-   ```bash
-   git push origin main
-   ```
-
-If you are using a `gh-pages` branch for deployment, ensure you push your changes to the `gh-pages` branch:
+The site is automatically deployed using GitHub Pages. Use `gh-pages` branch for deployment, ensure you push your changes to the `gh-pages` branch. Follow these steps to deploy any changes:
 
 1. **Checkout the `gh-pages` branch:**
    ```bash
