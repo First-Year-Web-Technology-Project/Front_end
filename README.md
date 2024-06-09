@@ -1,7 +1,7 @@
 # SeriniCraft
 
 Welcome to the SeriniCraft repository! This project is a static website built with pure HTML, CSS, and JavaScript. 
-The site is deployed using GitHub Pages and can be accessed [Serini.com](https://first-year-web-technology-project.github.io/SeriniCraft/)
+The site is deployed using GitHub Pages and can be accessed <a href="https://first-year-web-technology-project.github.io/SeriniCraft/" target="_blank">Serini.com</a>
 
 ## Table of Contents
 
